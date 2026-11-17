@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://marceloxibiu.github.io/sitemap.xml
+Sitemap: https://marcelocoutinho.net.br/sitemap.xml
