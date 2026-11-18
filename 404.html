@@ -512,5 +512,14 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
 })();
 (function(){var bs=document.querySelectorAll(".area-btn");bs.forEach(function(b){b.addEventListener("click",function(){var open=b.getAttribute("aria-expanded")==="true";bs.forEach(function(x){x.setAttribute("aria-expanded","false");document.getElementById("area-"+x.dataset.i).hidden=true});if(!open){b.setAttribute("aria-expanded","true");document.getElementById("area-"+b.dataset.i).hidden=false}})})})();
 </script>
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a');
+  if(!a)return;
+  var h=a.getAttribute('href')||'';
+  if(h.indexOf('wa.me')===-1&&h.indexOf('api.whatsapp.com')===-1&&h.indexOf('whatsapp.com')===-1)return;
+  try{if(typeof gtag==='function'){gtag('event','conversion',{'send_to':'AW-819923653/F95qCMPGt7odEMWV_IYD'});}}catch(_){}
+},true);
+</script>
 </body>
 </html>
