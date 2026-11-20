@@ -66,6 +66,19 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,241,233,.9);backdrop
 .menu{display:flex;gap:28px;align-items:center}
 .menu a{text-decoration:none;font-size:.95rem;font-weight:500;color:var(--ink)}
 .menu a:hover{color:var(--clay)}
+.dd{position:relative}
+.dd-btn{background:none;border:0;padding:0;font:inherit;font-size:.95rem;font-weight:500;color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.dd-btn:hover,.dd.open .dd-btn{color:var(--clay)}
+.dd-btn svg{transition:transform .2s}
+.dd.open .dd-btn svg{transform:rotate(180deg)}
+.dd-panel{display:none;position:absolute;top:calc(100% + 20px);left:50%;transform:translateX(-50%);width:320px;background:var(--sand);border:1px solid rgba(30,42,43,.1);border-radius:14px;box-shadow:0 18px 40px -18px rgba(30,42,43,.35);padding:8px}
+.dd-panel::before{content:"";position:absolute;left:0;right:0;top:-20px;height:20px}
+.dd.open .dd-panel{display:block}
+@media (hover:hover) and (min-width:901px){.dd:hover .dd-panel{display:block}.dd:hover .dd-btn{color:var(--clay)}.dd:hover .dd-btn svg{transform:rotate(180deg)}}
+.menu .dd-panel a{display:block;padding:12px 14px;border-radius:10px}
+.menu .dd-panel a:hover{background:rgba(30,42,43,.05)}
+.dd-panel strong{display:block;font-weight:600;color:var(--teal)}
+.dd-panel span{display:block;font-size:.84rem;font-weight:400;color:var(--muted);margin-top:2px;line-height:1.4}
 .menu .btn{padding:10px 20px;color:var(--teal);font-size:.92rem}
 .menu .btn:hover{color:var(--teal)}
 .burger{display:none;background:none;border:0;padding:8px;cursor:pointer}
@@ -178,6 +191,10 @@ footer a{color:#fff}
   .menu.open{display:flex}
   .menu a{padding:14px 0;border-bottom:1px solid rgba(30,42,43,.07)}
   .menu .btn{margin-top:14px;justify-content:center}
+  .dd-btn{width:100%;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(30,42,43,.07)}
+  .dd-panel{position:static;transform:none;width:auto;box-shadow:none;border:0;background:none;padding:0 0 0 14px}
+  .dd-panel::before{display:none}
+  .menu .dd-panel a{padding:12px 0;border-radius:0;border-bottom:1px solid rgba(30,42,43,.07)}
 }
 @media (max-width:560px){.chips{grid-template-columns:1fr}.tag{left:8px}}
 
@@ -239,7 +256,7 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
 .couple li{margin-bottom:10px}
 .others{margin-top:54px}
 .others>h3{font-size:1.15rem;color:var(--muted)}
-.cards.mini{grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.cards.mini{grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
 .cards.mini .card{padding:24px}
 .cards.mini .card h3{font-size:1.1rem}
 .cards.mini .card p{font-size:.94rem;margin:0}
@@ -278,7 +295,13 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
       <span><img class="wm" src="/img/logo-nome.png" alt="Marcelo Coutinho" width="190" height="18"><small>Psicologia e Saúde Mental</small></span></a>
     <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <nav class="menu" id="menu" aria-label="Principal">
-      <a href="#casal">Serviços</a>
+      <div class="dd">
+        <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="dd-serv">Serviços <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dd-panel" id="dd-serv">
+          <a href="#casal"><strong>Terapia de casal</strong><span>Para reencontrar o desejo, a confiança e o vínculo.</span></a>
+          <a href="#terapia-individual"><strong>Terapia individual</strong><span>Para entender seus padrões e escolher o que mudar.</span></a>
+        </div>
+      </div>
       <a href="#como-funciona">Abordagem</a>
       <a href="#sobre">Quem sou</a>
       <a href="#consultorio">Clínica</a>
@@ -356,10 +379,37 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="terapia-individual" style="padding-top:10px">
+  <div class="wrap">
+    <span class="eyebrow">Terapia individual</span>
+    <h2 class="reveal">Um espaço para entender o que se repete na sua vida e escolher o que mudar.</h2>
+    <div class="couple reveal">
+      <div>
+        <h3>Terapia individual</h3>
+        <p>Aqui o foco é você. Olhamos com cuidado os padrões de pensamento, emoção e comportamento que se repetem e que hoje trazem sofrimento ou limitam as suas escolhas.</p>
+        <p>Trabalho com a Terapia Cognitivo-Comportamental, que é estruturada e colaborativa: combinamos o que será trabalhado em cada etapa e acompanhamos juntos o que vai mudando.</p>
+        <p>Atendo adultos em diferentes momentos, de quem sente que chegou ao limite a quem quer se conhecer melhor antes de uma decisão importante.</p>
+        <p class="meta">Sessões de 50 minutos · Presencial no Sudoeste ou online · Sigilo profissional</p>
+        <a class="btn btn-primary" href="#contato">Agendar conversa sobre terapia individual</a>
+      </div>
+      <div>
+        <h4>O que trabalhamos</h4>
+        <ul>
+          <li>Ansiedade e estresse do dia a dia</li>
+          <li>Autoestima e autocobrança</li>
+          <li>Transições de vida e de carreira</li>
+          <li>Luto, perdas e momentos de crise</li>
+          <li>Limites e relações com outras pessoas</li>
+          <li>Decisões importantes e projetos de vida</li>
+        </ul>
+      </div>
+    </div>
     <div class="others">
       <h3 class="reveal">Outros atendimentos</h3>
       <div class="cards mini">
-        <article class="card reveal"><h3>Terapia individual</h3><p>Para entender seus padrões e criar novas formas de lidar com ansiedade, estresse, autoestima e momentos de transição.</p></article>
         <article class="card reveal"><h3>Orientação vocacional</h3><p>Para quem está escolhendo ou repensando a carreira. Olhamos interesses, valores e habilidades para decidir com mais segurança.</p></article>
         <article class="card reveal"><h3>Terapia online</h3><p>O mesmo sigilo e o mesmo rigor do consultório, de onde você estiver, dentro das normas do Conselho Federal de Psicologia.</p></article>
       </div>
@@ -583,6 +633,12 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
   var burger=document.querySelector(".burger"), menu=document.getElementById("menu");
   burger.addEventListener("click",function(){var o=menu.classList.toggle("open");burger.setAttribute("aria-expanded",o)});
   menu.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){menu.classList.remove("open");burger.setAttribute("aria-expanded","false")})});
+  var dd=document.querySelector(".dd"), ddb=dd.querySelector(".dd-btn");
+  function ddSet(o){dd.classList.toggle("open",o);ddb.setAttribute("aria-expanded",o)}
+  ddb.addEventListener("click",function(e){e.stopPropagation();ddSet(!dd.classList.contains("open"))});
+  dd.querySelectorAll(".dd-panel a").forEach(function(a){a.addEventListener("click",function(){ddSet(false)})});
+  document.addEventListener("click",function(e){if(!dd.contains(e.target))ddSet(false)});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"){ddSet(false)}});
   document.getElementById("yr").textContent=new Date().getFullYear();
   var els=document.querySelectorAll(".reveal");
   if("IntersectionObserver" in window){
