@@ -197,9 +197,9 @@ details p{color:var(--muted);padding-bottom:20px;margin:0}
 /* contato */
 .contact{background:var(--sand-2)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-.picker{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 26px}
-.picker button{font:inherit;font-size:.93rem;font-weight:500;padding:10px 18px;border-radius:999px;border:1.5px solid rgba(31,74,76,.35);background:transparent;color:var(--teal);cursor:pointer;transition:.2s}
-.picker button[aria-pressed="true"]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.wa-choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0 0}
+.wa-choices .btn{justify-content:flex-start;padding:14px 18px;font-size:.95rem;line-height:1.25}
+@media (max-width:560px){.wa-choices{grid-template-columns:1fr}}
 .info{list-style:none;padding:0;margin:0;display:grid;gap:20px}
 .info li{display:flex;gap:16px}
 .info svg{flex:none;color:var(--clay);margin-top:3px}
@@ -349,15 +349,15 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
           <div class="sub">
             <a class="sub-parent" href="#casal"><span class="sub-txt"><strong>Terapia de casal</strong></span><svg class="chev" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true"><path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <div class="sub-panel">
-              <a href="#contato" data-pk="0" data-sub="Olá, Marcelo! Vi seu site e gostaria de agendar uma primeira conversa sobre terapia de casal online. Podemos conversar sobre horários?">Casal online</a>
-              <a href="#contato" data-pk="0" data-sub="Olá, Marcelo! Vi seu site e gostaria de agendar uma primeira conversa sobre terapia de casal presencial, no consultório do Sudoeste. Podemos conversar sobre horários?">Casal presencial</a>
+              <a href="#contato">Casal online</a>
+              <a href="#contato">Casal presencial</a>
             </div>
           </div>
           <div class="sub">
             <a class="sub-parent" href="#terapia-individual"><span class="sub-txt"><strong>Terapia individual</strong></span><svg class="chev" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true"><path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <div class="sub-panel">
-              <a href="#contato" data-pk="1" data-sub="Olá, Marcelo! Vi seu site e gostaria de agendar uma primeira conversa sobre terapia individual online. Como funciona?">Individual online</a>
-              <a href="#contato" data-pk="1" data-sub="Olá, Marcelo! Vi seu site e gostaria de agendar uma primeira conversa sobre terapia individual presencial, no consultório do Sudoeste. Como funciona?">Individual presencial</a>
+              <a href="#contato">Individual online</a>
+              <a href="#contato">Individual presencial</a>
             </div>
           </div>
         </div>
@@ -396,7 +396,7 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
         <li>Sessões de 50 minutos</li>
         <li>Sigilo profissional</li>
       </ul>
-      <div class="social "><a class="wa-direct" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa%20sobre%20terapia%20de%20casal.%20Podemos%20conversar%20sobre%20hor%C3%A1rios%3F" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.100.6 4.200 1.600 6L0 24l6.300-1.600a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.500zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900s2.900 4.400 2.900 7c0 5.400-4.500 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8.100 8.100 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300 1.800.8 2.500.9 3.400.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg><span>WhatsApp</span></a><a href="https://www.instagram.com/marcelocoutinho.psi" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a><a href="https://www.linkedin.com/in/marcelo-coutinho-335b4496" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5 2.5 2.5 0 0 1 .02-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.600 4.800 6V21h-4v-5.200c0-1.300 0-2.900-1.800-2.900s-2.100 1.400-2.100 2.800V21h-4z"/></svg><span>LinkedIn</span></a></div>
+      <div class="social "><a class="wa-direct" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o.%20Podemos%20conversar%20sobre%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.100.6 4.200 1.600 6L0 24l6.300-1.600a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.500zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900s2.900 4.400 2.900 7c0 5.400-4.500 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8.100 8.100 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300 1.800.8 2.500.9 3.400.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg><span>WhatsApp</span></a><a href="https://www.instagram.com/marcelocoutinho.psi" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a><a href="https://www.linkedin.com/in/marcelo-coutinho-335b4496" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5 2.5 2.5 0 0 1 .02-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.600 4.800 6V21h-4v-5.200c0-1.300 0-2.900-1.800-2.900s-2.100 1.400-2.100 2.800V21h-4z"/></svg><span>LinkedIn</span></a></div>
     </div>
     <div class="portrait">
       <img src="/img/foto-hero.jpg" alt="Marcelo Coutinho, psicólogo clínico, de óculos e camisa polo preta, com os braços cruzados" width="900" height="1125" fetchpriority="high">
@@ -524,12 +524,12 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
       <article class="path reveal">
         <h3>Com o Marcelo</h3>
         <p>Sessões conduzidas por mim, com agenda limitada. Indicado para quem prefere trabalhar diretamente comigo.</p>
-        <button type="button" class="btn btn-ghost" data-pick="0">Quero este formato</button>
+        <a class="btn btn-ghost" data-key="marcelo" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo%21%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o%20para%20atendimento%20diretamente%20com%20voc%C3%AA.%20Podemos%20conversar%20sobre%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener">Quero este formato</a>
       </article>
       <article class="path team reveal">
         <h3>Com a equipe</h3>
         <p>Sessões conduzidas por um psicólogo da equipe, com supervisão clínica minha e início mais rápido.</p>
-        <button type="button" class="btn btn-primary" data-pick="4">Quero este formato</button>
+        <a class="btn btn-primary" data-key="equipe" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo%21%20Vi%20seu%20site%20e%20tenho%20interesse%20no%20atendimento%20com%20a%20sua%20equipe.%20Gostaria%20de%20entender%20como%20funciona%20e%20quais%20s%C3%A3o%20os%20pr%C3%B3ximos%20passos." target="_blank" rel="noopener">Quero este formato</a>
       </article>
     </div>
     <p class="team-note reveal">Na primeira conversa, eu indico o formato que faz mais sentido para o momento de vocês. Se começarem com a equipe e quiserem mudar depois, a troca é possível.</p>
@@ -545,7 +545,7 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
         <li>Supervisão contínua, com sigilo preservado</li>
         <li>Presencial no Sudoeste ou online</li>
       </ul>
-      <button type="button" class="btn btn-primary reveal" data-pick="4">Conversar sobre o melhor formato</button>
+      <a class="btn btn-primary reveal" data-key="formato" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo%21%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20melhor%20formato%20de%20atendimento.%20Podemos%20conversar%3F" target="_blank" rel="noopener">Conversar sobre o melhor formato</a>
     </div>
   </div>
 </section>
@@ -638,23 +638,19 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
     <div>
       <span class="eyebrow">Agendamento</span>
       <p class="lead">Escolha a opção desejada. Você será informado sobre os valores, a disponibilidade de agenda e a dinâmica dos atendimentos, tudo em detalhes. Também poderá tirar quaisquer dúvidas de forma mais reservada.</p>
-      <div class="picker" role="group" aria-label="Tipo de atendimento">
-        <button type="button" aria-pressed="true" data-key="casal" data-msg="Olá, Marcelo! Vi seu site e gostaria de agendar uma primeira conversa sobre terapia de casal. Podemos conversar sobre horários?">Terapia de casal</button>
-        <button type="button" aria-pressed="false" data-key="individual" data-msg="Olá, Marcelo! Vi seu site e gostaria de agendar uma primeira conversa sobre terapia individual. Como funciona?">Terapia individual</button>
-        <button type="button" aria-pressed="false" data-key="vocacional" data-msg="Olá, Marcelo! Vi seu site e gostaria de saber mais sobre orientação vocacional.">Orientação vocacional</button>
-        <button type="button" aria-pressed="false" data-key="online" data-msg="Olá, Marcelo! Vi seu site e gostaria de fazer terapia online. Pode me explicar como funciona e quais horários tem disponíveis?">Terapia online</button>
-        <button type="button" aria-pressed="false" data-key="equipe" data-msg="Olá, Marcelo! Vi seu site e tenho interesse no atendimento com a sua equipe. Gostaria de entender como funciona e quais são os próximos passos.">Atendimento com a equipe</button>
+      <div class="wa-choices" role="group" aria-label="Escolha o atendimento e fale no WhatsApp">
+        <a class="btn btn-primary" data-key="casal-online" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo%21%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o%20para%20terapia%20de%20casal%20online.%20Podemos%20conversar%20sobre%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.100.6 4.200 1.600 6L0 24l6.300-1.600a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.500zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900s2.900 4.400 2.900 7c0 5.400-4.500 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8.100 8.100 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300 1.800.8 2.500.9 3.400.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>Terapia de casal online</a>
+        <a class="btn btn-primary" data-key="casal-presencial" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo%21%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o%20para%20terapia%20de%20casal%20presencial%2C%20no%20consult%C3%B3rio%20do%20Sudoeste.%20Podemos%20conversar%20sobre%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.100.6 4.200 1.600 6L0 24l6.300-1.600a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.500zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900s2.900 4.400 2.900 7c0 5.400-4.500 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8.100 8.100 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300 1.800.8 2.500.9 3.400.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>Terapia de casal presencial</a>
+        <a class="btn btn-primary" data-key="individual-online" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo%21%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o%20para%20terapia%20individual%20online.%20Podemos%20conversar%20sobre%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.100.6 4.200 1.600 6L0 24l6.300-1.600a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.500zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900s2.900 4.400 2.900 7c0 5.400-4.500 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8.100 8.100 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300 1.800.8 2.500.9 3.400.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>Terapia individual online</a>
+        <a class="btn btn-primary" data-key="individual-presencial" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo%21%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o%20para%20terapia%20individual%20presencial%2C%20no%20consult%C3%B3rio%20do%20Sudoeste.%20Podemos%20conversar%20sobre%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.100.6 4.200 1.600 6L0 24l6.300-1.600a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.500zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900s2.900 4.400 2.900 7c0 5.400-4.500 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8.100 8.100 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300 1.800.8 2.500.9 3.400.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>Terapia individual presencial</a>
       </div>
-      <a id="wa-main" class="btn btn-primary" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa%20sobre%20terapia%20de%20casal.%20Podemos%20conversar%20sobre%20hor%C3%A1rios%3F" target="_blank" rel="noopener">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.100.6 4.200 1.600 6L0 24l6.300-1.600a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.500zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900s2.900 4.400 2.900 7c0 5.400-4.500 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8.100 8.100 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300 1.800.8 2.500.9 3.400.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>
-        Chamar no WhatsApp</a>
     </div>
     <ul class="info">
       <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.200 7-12a7 7 0 1 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
         <div><b>Consultório</b><span>SQSW 301, Bloco A, Edifício Espaço Vip, sala 118<br>Sudoeste, Brasília, DF, CEP 70673-601</span><br>
         <a href="https://www.google.com/maps/search/?api=1&query=SQSW+301+Bloco+A+Edif%C3%ADcio+Espa%C3%A7o+Vip+Bras%C3%ADlia" target="_blank" rel="noopener">Abrir no Google Maps</a></div></li>
       <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.200 2 19.800 19.800 0 0 1-8.600-3.100 19.500 19.500 0 0 1-6-6A19.800 19.800 0 0 1 2.100 4.200 2 2 0 0 1 4.100 2h3a2 2 0 0 1 2 1.700c.1 1 .4 1.900.7 2.800a2 2 0 0 1-.5 2.100L8.100 9.900a16 16 0 0 0 6 6l1.300-1.300a2 2 0 0 1 2.100-.4c.9.3 1.800.6 2.800.7a2 2 0 0 1 1.700 2z"/></svg>
-        <div><b>WhatsApp</b><a class="wa-direct" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa%20sobre%20terapia%20de%20casal.%20Podemos%20conversar%20sobre%20hor%C3%A1rios%3F" target="_blank" rel="noopener">(61) 99313-6993</a></div></li>
+        <div><b>WhatsApp</b><a class="wa-direct" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o.%20Podemos%20conversar%20sobre%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener">(61) 99313-6993</a></div></li>
       <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r="1"/></svg>
         <div><b>Instagram</b><a href="https://www.instagram.com/marcelocoutinho.psi" target="_blank" rel="noopener">@marcelocoutinho.psi</a></div></li>
       <li><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:var(--clay);margin-top:3px"><path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5 2.5 2.5 0 0 1 .02-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.600 4.800 6V21h-4v-5.200c0-1.300 0-2.900-1.800-2.900s-2.100 1.400-2.100 2.800V21h-4z"/></svg>
@@ -672,7 +668,7 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
       <span class="footlogo"><img loading="lazy" class="mk" src="/img/logo-marca.png" alt="" width="27" height="34"><img loading="lazy" class="wm" src="/img/logo-nome.png" alt="Marcelo Coutinho" width="150" height="15"></span><br>
       Psicólogo Clínico · CRP 01/18540
     </div>
-    <div class="social dark"><a class="wa-direct" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa%20sobre%20terapia%20de%20casal.%20Podemos%20conversar%20sobre%20hor%C3%A1rios%3F" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.100.6 4.200 1.600 6L0 24l6.300-1.600a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.500zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900s2.900 4.400 2.900 7c0 5.400-4.500 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8.100 8.100 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300 1.800.8 2.500.9 3.400.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg><span>WhatsApp</span></a><a href="https://www.instagram.com/marcelocoutinho.psi" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a><a href="https://www.linkedin.com/in/marcelo-coutinho-335b4496" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5 2.5 2.5 0 0 1 .02-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.600 4.800 6V21h-4v-5.200c0-1.300 0-2.900-1.800-2.900s-2.100 1.400-2.100 2.800V21h-4z"/></svg><span>LinkedIn</span></a></div>
+    <div class="social dark"><a class="wa-direct" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o.%20Podemos%20conversar%20sobre%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.100.6 4.200 1.600 6L0 24l6.300-1.600a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.500zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900s2.900 4.400 2.900 7c0 5.400-4.500 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8.100 8.100 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300 1.800.8 2.500.9 3.400.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg><span>WhatsApp</span></a><a href="https://www.instagram.com/marcelocoutinho.psi" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a><a href="https://www.linkedin.com/in/marcelo-coutinho-335b4496" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5 2.5 2.5 0 0 1 .02-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.600 4.800 6V21h-4v-5.200c0-1.300 0-2.900-1.800-2.900s-2.100 1.400-2.100 2.800V21h-4z"/></svg><span>LinkedIn</span></a></div>
     <div class="privacy">
       <details style="background:transparent;border:0;padding:0;margin:0">
         <summary style="padding:0;font-weight:500;color:#fff;justify-content:flex-start;gap:10px">Privacidade e sigilo</summary>
@@ -683,45 +679,20 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
   </div>
 </footer>
 
-<a class="wa-float wa-link-direct" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa%20sobre%20terapia%20de%20casal.%20Podemos%20conversar%20sobre%20hor%C3%A1rios%3F" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+<a class="wa-float wa-link-direct" href="https://wa.me/5561993136993?text=Ol%C3%A1%2C%20Marcelo!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o.%20Podemos%20conversar%20sobre%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
   <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.100.6 4.200 1.600 6L0 24l6.300-1.600a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.500zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900s2.900 4.400 2.900 7c0 5.400-4.500 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8.100 8.100 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300 1.800.8 2.500.9 3.400.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>
 </a>
 
 <script>
 (function(){
-  var NUM="5561993136993";
-  function url(t){return "https://wa.me/"+NUM+"?text="+encodeURIComponent(t);}
-  var cur=document.querySelector(".picker button[aria-pressed=true]").getAttribute("data-msg");
-  window.__svc="casal";
-  var main=document.getElementById("wa-main");
-  function upd(){var u=url(cur); main.href=u; document.querySelectorAll(".wa-link-direct,.wa-direct").forEach(function(a){a.href=u});}
-  upd();
-  document.querySelectorAll(".picker button").forEach(function(b){
-    b.addEventListener("click",function(){
-      document.querySelectorAll(".picker button").forEach(function(x){x.setAttribute("aria-pressed","false")});
-      b.setAttribute("aria-pressed","true"); cur=b.getAttribute("data-msg"); window.__svc=b.getAttribute("data-key"); upd();
-    });
-  });
-
   document.querySelectorAll("[data-pick]").forEach(function(c){
     c.addEventListener("click",function(){
-      var btns=document.querySelectorAll(".picker button"), b=btns[+c.getAttribute("data-pick")];
-      if(b)b.click();
       document.getElementById("contato").scrollIntoView({behavior:"smooth"});
     });
   });
   var burger=document.querySelector(".burger"), menu=document.getElementById("menu");
   burger.addEventListener("click",function(){var o=menu.classList.toggle("open");burger.setAttribute("aria-expanded",o)});
   menu.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){menu.classList.remove("open");burger.setAttribute("aria-expanded","false")})});
-  document.querySelectorAll("[data-sub]").forEach(function(a){
-    a.addEventListener("click",function(e){
-      e.preventDefault();
-      var btns=document.querySelectorAll(".picker button"), b=btns[+a.getAttribute("data-pk")];
-      if(b)b.click();
-      cur=a.getAttribute("data-sub"); upd();
-      document.getElementById("contato").scrollIntoView({behavior:"smooth"});
-    });
-  });
   document.querySelectorAll(".sub-parent").forEach(function(p){
     p.addEventListener("click",function(e){
       if(window.matchMedia("(hover:none) and (min-width:901px)").matches&&!p.parentNode.classList.contains("open")){
@@ -752,7 +723,7 @@ document.addEventListener('click',function(e){
   if(!a)return;
   var h=a.getAttribute('href')||'';
   if(h.indexOf('wa.me')===-1&&h.indexOf('api.whatsapp.com')===-1&&h.indexOf('whatsapp.com')===-1)return;
-  try{if(typeof gtag==='function'){gtag('event','whatsapp_click',{'servico':window.__svc||'casal'});gtag('event','conversion',{'send_to':'AW-819923653/F95qCMPGt7odEMWV_IYD'});}}catch(_){}
+  try{if(typeof gtag==='function'){gtag('event','whatsapp_click',{'servico':a.getAttribute('data-key')||'casal'});gtag('event','conversion',{'send_to':'AW-819923653/F95qCMPGt7odEMWV_IYD'});}}catch(_){}
 },true);
 </script>
 </body>
