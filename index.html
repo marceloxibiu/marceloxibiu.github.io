@@ -75,7 +75,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,241,233,.9);backdrop
 .dd-btn:hover,.dd.open .dd-btn{color:var(--clay)}
 .dd-btn svg{transition:transform .2s}
 .dd.open .dd-btn svg{transform:rotate(180deg)}
-.dd-panel{display:none;position:absolute;top:calc(100% + 20px);left:50%;transform:translateX(-50%);width:320px;background:var(--sand);border:1px solid rgba(30,42,43,.1);border-radius:14px;box-shadow:0 18px 40px -18px rgba(30,42,43,.35);padding:8px}
+.dd-panel{display:none;position:absolute;top:calc(100% + 20px);left:50%;transform:translateX(-50%);width:240px;background:var(--sand);border:1px solid rgba(30,42,43,.1);border-radius:14px;box-shadow:0 18px 40px -18px rgba(30,42,43,.35);padding:8px}
 .dd-panel::before{content:"";position:absolute;left:0;right:0;top:-20px;height:20px}
 .dd.open .dd-panel{display:block}
 @media (hover:hover) and (min-width:901px){.dd:hover .dd-panel{display:block}.dd:hover .dd-btn{color:var(--clay)}.dd:hover .dd-btn svg{transform:rotate(180deg)}}
@@ -315,6 +315,10 @@ section.service{padding-top:44px}
 .why-note{color:var(--muted);max-width:68ch;margin:26px 0 0}
 .why .alt{margin:14px 0 0;color:var(--ink)}
 .why .alt a{color:var(--teal);font-weight:600}
+.modal-cards .card ul{margin:14px 0 20px}
+.modal-cards .card li{margin-bottom:8px}
+.modal-cards .card .btn{margin-top:4px}
+.modal-end{color:var(--muted);max-width:68ch;margin:26px 0 0}
 .others{margin-top:54px}
 .others>h3{font-size:1.15rem;color:var(--muted)}
 .cards.mini{grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
@@ -359,20 +363,8 @@ section.service{padding-top:44px}
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="dd-serv">Serviços <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <div class="dd-panel" id="dd-serv">
-          <div class="sub">
-            <a class="sub-parent" href="/terapia-de-casal-online/"><span class="sub-txt"><strong>Terapia de casal</strong></span><svg class="chev" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true"><path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <div class="sub-panel">
-              <a href="/terapia-de-casal-online/">Casal online</a>
-              <a href="/terapia-de-casal-presencial/">Casal presencial</a>
-            </div>
-          </div>
-          <div class="sub">
-            <a class="sub-parent" href="/terapia-individual-online/"><span class="sub-txt"><strong>Terapia individual</strong></span><svg class="chev" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true"><path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <div class="sub-panel">
-              <a href="/terapia-individual-online/">Individual online</a>
-              <a href="/terapia-individual-presencial/">Individual presencial</a>
-            </div>
-          </div>
+          <a href="/terapia-de-casal/"><strong>Terapia de casal</strong></a>
+          <a href="/terapia-individual/"><strong>Terapia individual</strong></a>
         </div>
       </div>
       <a href="#abordagem">Abordagem</a>
