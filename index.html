@@ -156,8 +156,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,241,233,.9);backdrop
 .how-steps li::before{content:counter(hs);position:absolute;left:24px;top:22px;width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-family:Fraunces,serif;font-size:1.15rem}
 .how-steps h3{font-size:1.15rem;margin-bottom:6px}
 .how-steps p{color:var(--muted);margin:0;font-size:.96rem}
-.how-steps a{color:var(--teal);font-weight:600;text-decoration:underline;text-underline-offset:3px}
-.how-steps a:hover{color:var(--clay)}
+.how-steps a{display:inline-block;padding:1px 12px;margin:0 1px;border-radius:999px;background:var(--lime);color:var(--teal);font-weight:600;font-size:.92em;line-height:1.5;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.how-steps a:hover{transform:translateY(-1px);box-shadow:0 6px 14px -6px rgba(31,74,76,.45)}
 @media (max-width:1100px){.how-steps{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:620px){.how-steps{grid-template-columns:1fr}.how-head{text-align:left}}
 .steps{list-style:none;margin:0;padding:0;counter-reset:s}
