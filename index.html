@@ -76,6 +76,16 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,241,233,.9);backdrop
 .dd.open .dd-panel{display:block}
 @media (hover:hover) and (min-width:901px){.dd:hover .dd-panel{display:block}.dd:hover .dd-btn{color:var(--clay)}.dd:hover .dd-btn svg{transform:rotate(180deg)}}
 .menu .dd-panel a{display:block;padding:12px 14px;border-radius:10px}
+.sub{position:relative}
+.menu .sub-parent{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.sub-parent .chev{flex:none;color:var(--muted)}
+.sub-panel{display:none;position:absolute;top:0;left:calc(100% + 6px);width:210px;background:var(--sand);border:1px solid rgba(30,42,43,.1);border-radius:14px;box-shadow:0 18px 40px -18px rgba(30,42,43,.35);padding:8px}
+.sub-panel::before{content:"";position:absolute;top:0;bottom:0;left:-8px;width:8px}
+.menu .sub-panel a{display:block;padding:12px 14px;border-radius:10px;font-weight:500;color:var(--teal)}
+.menu .sub-panel a:hover{background:rgba(30,42,43,.05);color:var(--clay)}
+.sub:focus-within .sub-panel,.sub.open .sub-panel{display:block}
+@media (hover:hover) and (min-width:901px){.sub:hover .sub-panel{display:block}}
+.sub:hover>.sub-parent,.sub:focus-within>.sub-parent{background:rgba(30,42,43,.05)}
 .menu .dd-panel a:hover{background:rgba(30,42,43,.05)}
 .dd-panel strong{display:block;font-weight:600;color:var(--teal)}
 .dd-panel span{display:block;font-size:.84rem;font-weight:400;color:var(--muted);margin-top:2px;line-height:1.4}
@@ -195,6 +205,10 @@ footer a{color:#fff}
   .dd-panel{position:static;transform:none;width:auto;box-shadow:none;border:0;background:none;padding:0 0 0 14px}
   .dd-panel::before{display:none}
   .menu .dd-panel a{padding:12px 0;border-radius:0;border-bottom:1px solid rgba(30,42,43,.07)}
+  .sub-panel{display:block;position:static;width:auto;box-shadow:none;border:0;background:none;padding:0 0 6px 14px}
+  .sub-panel::before{display:none}
+  .sub .chev{display:none}
+  .menu .sub-panel a{padding:10px 0;border-bottom:0;font-size:.92rem}
 }
 @media (max-width:560px){.chips{grid-template-columns:1fr}.tag{left:8px}}
 
@@ -298,8 +312,20 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="dd-serv">Serviços <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <div class="dd-panel" id="dd-serv">
-          <a href="#casal"><strong>Terapia de casal</strong><span>Para reencontrar o desejo, a confiança e o vínculo.</span></a>
-          <a href="#terapia-individual"><strong>Terapia individual</strong><span>Para entender seus padrões e escolher o que mudar.</span></a>
+          <div class="sub">
+            <a class="sub-parent" href="#casal"><span class="sub-txt"><strong>Terapia de casal</strong><span>Para reencontrar o desejo, a confiança e o vínculo.</span></span><svg class="chev" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true"><path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="sub-panel">
+              <a href="#contato" data-pk="0" data-sub="Olá, Marcelo! Vi seu site e gostaria de agendar uma primeira conversa sobre terapia de casal online. Podemos conversar sobre horários?">Casal online</a>
+              <a href="#contato" data-pk="0" data-sub="Olá, Marcelo! Vi seu site e gostaria de agendar uma primeira conversa sobre terapia de casal presencial, no consultório do Sudoeste. Podemos conversar sobre horários?">Casal presencial</a>
+            </div>
+          </div>
+          <div class="sub">
+            <a class="sub-parent" href="#terapia-individual"><span class="sub-txt"><strong>Terapia individual</strong><span>Para entender seus padrões e escolher o que mudar.</span></span><svg class="chev" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true"><path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="sub-panel">
+              <a href="#contato" data-pk="1" data-sub="Olá, Marcelo! Vi seu site e gostaria de agendar uma primeira conversa sobre terapia individual online. Como funciona?">Individual online</a>
+              <a href="#contato" data-pk="1" data-sub="Olá, Marcelo! Vi seu site e gostaria de agendar uma primeira conversa sobre terapia individual presencial, no consultório do Sudoeste. Como funciona?">Individual presencial</a>
+            </div>
+          </div>
         </div>
       </div>
       <a href="#como-funciona">Abordagem</a>
@@ -633,6 +659,24 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
   var burger=document.querySelector(".burger"), menu=document.getElementById("menu");
   burger.addEventListener("click",function(){var o=menu.classList.toggle("open");burger.setAttribute("aria-expanded",o)});
   menu.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){menu.classList.remove("open");burger.setAttribute("aria-expanded","false")})});
+  document.querySelectorAll("[data-sub]").forEach(function(a){
+    a.addEventListener("click",function(e){
+      e.preventDefault();
+      var btns=document.querySelectorAll(".picker button"), b=btns[+a.getAttribute("data-pk")];
+      if(b)b.click();
+      cur=a.getAttribute("data-sub"); upd();
+      document.getElementById("contato").scrollIntoView({behavior:"smooth"});
+    });
+  });
+  document.querySelectorAll(".sub-parent").forEach(function(p){
+    p.addEventListener("click",function(e){
+      if(window.matchMedia("(hover:none) and (min-width:901px)").matches&&!p.parentNode.classList.contains("open")){
+        e.preventDefault(); e.stopPropagation();
+        document.querySelectorAll(".sub.open").forEach(function(x){x.classList.remove("open")});
+        p.parentNode.classList.add("open");
+      }
+    });
+  });
   var dd=document.querySelector(".dd"), ddb=dd.querySelector(".dd-btn");
   function ddSet(o){dd.classList.toggle("open",o);ddb.setAttribute("aria-expanded",o)}
   ddb.addEventListener("click",function(e){e.stopPropagation();ddSet(!dd.classList.contains("open"))});
