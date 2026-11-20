@@ -107,7 +107,19 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,241,233,.9);backdrop
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
 .hero h1 em{font-style:italic;color:var(--teal-2)}
 .hero h1{font-size:clamp(1.75rem,3.6vw,2.7rem)}
-@media (min-width:901px){.hero-grid{align-items:start}.hero .portrait{margin-top:34px}}
+@media (min-width:901px){
+.hero{padding:clamp(22px,4vh,46px) 0 clamp(26px,4vh,50px)}
+.hero-grid{grid-template-columns:1.3fr .7fr;gap:48px;align-items:start}
+.hero .eyebrow{margin-bottom:10px}
+.hero h1{font-size:clamp(1.55rem,2.5vw + .3vh,2.3rem);margin-bottom:.4em}
+.hero .intro{font-size:clamp(.86rem,.7vw + .5vh,1rem);line-height:1.5;max-width:70ch}
+.hero .intro p{margin:0 0 .55em}
+.hero .intro .intro-hi{font-size:1.2rem;margin-bottom:.3em}
+.hero .cta{margin:18px 0 16px}
+.hero .facts{margin:0 0 14px}
+.hero .social{margin-top:0}
+.hero .portrait{margin-top:28px;margin-left:auto;max-width:min(100%,calc((100vh - 190px)*.8))}
+}
 .hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin:30px 0 28px}
 .facts{display:flex;flex-wrap:wrap;gap:10px 22px;padding:0;margin:0;list-style:none;font-size:.93rem;color:var(--muted)}
 .facts li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--clay);margin-right:9px}
@@ -357,8 +369,7 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
         <p>Sou psicólogo clínico e atuo na área da psicoterapia há mais de 20 anos.</p>
         <p>Acredito em uma terapia que acolhe sem julgamentos e ao mesmo tempo é honesta: te recebo e olho com verdade para o seu momento e suas dores.</p>
         <p>Por meio de uma escuta atenta, realizo um diagnóstico realista e com intervenções personalizadas ajudo você a compreender sua história, reconhecer padrões e construir novos caminhos.</p>
-        <p>Sou especialista em terapia de casal e ao longo da minha trajetória ajudei muitos casais a se reconectarem, reconstruírem o diálogo e fortalecerem seus vínculos.</p>
-        <p>Sou fundador da <em>Clínica Marcelo Coutinho</em>, que conta com uma equipe de especialistas em diferentes áreas da saúde mental, que atuam sob minha supervisão direta. Juntos, oferecemos um cuidado individualizado, ético e comprometido com as necessidades de cada pessoa.</p>
+        <p>Sou especialista em Terapia de Casal e fundador da <em>Clínica Marcelo Coutinho</em>, que conta com uma equipe de especialistas em diferentes áreas da saúde mental, que atuam sob minha supervisão direta.</p>
         <p class="intro-bye"><strong>Seja bem-vindo!</strong> Porque acolher é essencial, mas transformar também faz parte do cuidado.</p>
       </div>
       <div class="cta">
