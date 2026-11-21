@@ -28,7 +28,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A283F'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23F6F1E9'%3EMC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --sand:#FCF7F1; --sand-2:#F2E9DD; --ink:#0F2233; --muted:#56606A;
@@ -348,6 +348,8 @@ section.service{padding-top:44px}
 .team-foot{display:flex;flex-wrap:wrap;gap:22px 34px;align-items:center;justify-content:space-between;margin-top:44px}
 @media (max-width:900px){.paths,.pick-steps{grid-template-columns:1fr}.pick-steps li{padding-top:0;padding-left:60px}}
 
+/* texto corrido: Poppins 15px, entrelinha 1,5 (títulos, menu e botões não entram) */
+main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li){font-family:Poppins,Inter,sans-serif!important;font-size:15px!important;line-height:1.5!important}
 </style>
 </head>
 <body>
