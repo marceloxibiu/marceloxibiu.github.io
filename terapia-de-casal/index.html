@@ -163,7 +163,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,241,233,.9);backdrop
 .how-steps a{display:inline-block;padding:1px 12px;margin:0 1px;border-radius:999px;background:var(--lime);color:var(--teal);font-weight:600;font-size:.92em;line-height:1.5;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
 .how-steps a:hover{transform:translateY(-1px);box-shadow:0 6px 14px -6px rgba(10,40,63,.45)}
 @media (max-width:1100px){.how-steps>li{flex-basis:calc((100% - 20px)/2)}.how-steps{gap:20px}}
-@media (max-width:620px){.how-steps>li{flex-basis:100%}.how-head{text-align:left}}
+@media (max-width:620px){.service-head.has-photo{gap:14px}.service-photo{width:84px;height:84px}.how-steps>li{flex-basis:100%}.how-head{text-align:left}}
 .steps{list-style:none;margin:0;padding:0;counter-reset:s}
 .steps li{counter-increment:s;position:relative;padding:0 0 28px 64px}
 .steps li::before{content:counter(s);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-family:Poppins,sans-serif;font-size:1.15rem}
@@ -300,8 +300,9 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
 .approach p{color:var(--muted);margin:0 0 1em}
 .approach-close{max-width:74ch;margin:30px 0 0;color:var(--teal);font-weight:500}
 .couple{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;background:#fff;border-radius:var(--radius);padding:46px;border:1px solid rgba(30,42,43,.07);margin-top:40px}
-.couple.with-photo{grid-template-columns:1.35fr .65fr;align-items:center;gap:36px}
-.service-photo{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:calc(var(--radius) - 4px);display:block}
+.service-head.has-photo{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+.service-head h1{margin-bottom:0}
+.service-photo{width:clamp(110px,11vw,150px);height:clamp(110px,11vw,150px);object-fit:cover;object-position:50% 25%;border-radius:calc(var(--radius) - 4px);display:block;box-shadow:0 14px 30px -18px rgba(10,40,63,.5)}
 .couple h3{font-size:1.9rem}
 .couple p{color:var(--muted)}
 .couple .meta{font-size:.93rem;margin:0 0 24px}
@@ -329,7 +330,7 @@ section.service{padding-top:44px}
 .cards.mini .card{padding:24px}
 .cards.mini .card h3{font-size:1.1rem}
 .cards.mini .card p{font-size:.94rem;margin:0}
-@media (max-width:900px){.couple,.couple.with-photo{grid-template-columns:1fr;padding:28px;gap:24px}.service-photo{aspect-ratio:4/3;object-position:50% 25%}.cards.mini{grid-template-columns:1fr}}
+@media (max-width:900px){.couple{grid-template-columns:1fr;padding:28px;gap:24px}.cards.mini{grid-template-columns:1fr}}
 
 /* consultorio */
 .rooms{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:36px;align-items:start}
@@ -398,8 +399,12 @@ main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.how-head
 <section class="service" id="servico" style="padding-bottom:36px">
   <div class="wrap">
     <p class="crumb"><a href="/">&larr; Página inicial</a></p>
-    <span class="eyebrow">Terapia de casal e relacionamentos</span>
-    <h1 class="reveal">Reconstruir o <b>desejo</b>, a <b>confiança</b> e o <b>vínculo</b>.</h1>
+    <div class="service-head">
+      <div>
+        <span class="eyebrow">Terapia de casal e relacionamentos</span>
+        <h1 class="reveal">Reconstruir o <b>desejo</b>, a <b>confiança</b> e o <b>vínculo</b>.</h1>
+      </div>
+    </div>
     <div class="couple reveal" style="grid-template-columns:1fr;padding:34px">
       <div>
         <p style="font-family:Poppins,Inter,sans-serif;font-size:15px;line-height:1.5;margin:0 0 1em;text-align:justify">É possível.</p>
@@ -408,7 +413,6 @@ main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.how-head
         <p style="font-family:Poppins,Inter,sans-serif;font-size:15px;line-height:1.5;margin:0 0 1em;text-align:justify">O acolhimento incondicional das dores de cada um e uma intervenção estratégica, com objetivos claros para o casal e para cada um individualmente, tornam possível que a relação prospere em confiança, amor e abundância.</p>
 
       </div>
-
     </div>
   </div>
 </section>
