@@ -350,6 +350,16 @@ section.service{padding-top:44px}
 
 /* texto corrido: Poppins 15px, entrelinha 1,5 (títulos, menu e botões não entram) */
 main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.intro-hi):not(.quote){font-family:Poppins,Inter,sans-serif!important;font-size:15px!important;line-height:1.5!important}
+/* primeira tela compacta no computador */
+@media (min-width:901px){
+.hero{padding-top:clamp(12px,2vh,22px);padding-bottom:20px}
+.hero .intro p{margin:0 0 .3em}
+.hero .intro .intro-hi{margin-bottom:.15em}
+.hero .cta{margin:12px 0 10px}
+.hero .cta .btn{padding:12px 26px}
+.hero .facts{margin:0 0 10px}
+.hero .eyebrow{margin-bottom:6px}
+}
 </style>
 </head>
 <body>
