@@ -357,6 +357,8 @@ section.service{padding-top:44px}
 
 /* texto corrido: Poppins 15px, entrelinha 1,5 (títulos, menu e botões não entram) */
 main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.intro-hi):not(.quote){font-family:Poppins,Inter,sans-serif!important;font-size:15px!important;line-height:1.5!important}
+a.card{display:block;text-decoration:none;color:inherit;cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s}
+a.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px -20px rgba(10,40,63,.35);border-color:var(--lime)}
 /* texto justificado */
 main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.how-head *):not(.facts li):not(.cta *){text-align:justify;text-justify:inter-word;hyphens:manual}
 /* primeira tela compacta no computador */
@@ -520,8 +522,8 @@ main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.how-head
       <p>Na prática, isso significa um atendimento que não se limita a aliviar sintomas. Olhamos para o que você está vivendo agora e para o significado que isso tem na sua história, para que as mudanças façam sentido na sua vida real.</p>
     </div>
     <div class="cards mini">
-      <article class="card reveal"><h3>Atendimento individual</h3><p>Um espaço seu, no seu ritmo. Identificamos padrões que se repetem, definimos o que você quer mudar e experimentamos novas formas de agir entre uma sessão e outra.</p></article>
-      <article class="card reveal"><h3>Atendimento de casal</h3><p>Sessões com os dois, em que cada um é ouvido. Trabalhamos o jeito de conversar, pedir e discordar, e o ciclo em que a relação entrou, para que decidam juntos o que fazer com ele.</p></article>
+      <a class="card reveal" href="/terapia-individual/"><h3>Atendimento individual</h3><p>Um espaço seu, no seu ritmo. Identificamos padrões que se repetem, definimos o que você quer mudar e experimentamos novas formas de agir entre uma sessão e outra.</p></a>
+      <a class="card reveal" href="/terapia-de-casal/"><h3>Atendimento de casal</h3><p>Sessões com os dois, em que cada um é ouvido. Trabalhamos o jeito de conversar, pedir e discordar, e o ciclo em que a relação entrou, para que decidam juntos o que fazer com ele.</p></a>
     </div>
     <p class="approach-close reveal">Cada processo é construído sob medida. Sessões de 50 minutos, presenciais no Sudoeste ou online, com sigilo profissional.</p>
   </div>
