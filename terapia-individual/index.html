@@ -300,6 +300,8 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
 .approach p{color:var(--muted);margin:0 0 1em}
 .approach-close{max-width:74ch;margin:30px 0 0;color:var(--teal);font-weight:500}
 .couple{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;background:#fff;border-radius:var(--radius);padding:46px;border:1px solid rgba(30,42,43,.07);margin-top:40px}
+.couple.with-photo{grid-template-columns:1.35fr .65fr;align-items:center;gap:36px}
+.service-photo{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:calc(var(--radius) - 4px);display:block}
 .couple h3{font-size:1.9rem}
 .couple p{color:var(--muted)}
 .couple .meta{font-size:.93rem;margin:0 0 24px}
@@ -327,7 +329,7 @@ section.service{padding-top:44px}
 .cards.mini .card{padding:24px}
 .cards.mini .card h3{font-size:1.1rem}
 .cards.mini .card p{font-size:.94rem;margin:0}
-@media (max-width:900px){.couple{grid-template-columns:1fr;padding:28px;gap:24px}.cards.mini{grid-template-columns:1fr}}
+@media (max-width:900px){.couple,.couple.with-photo{grid-template-columns:1fr;padding:28px;gap:24px}.service-photo{aspect-ratio:4/3;object-position:50% 25%}.cards.mini{grid-template-columns:1fr}}
 
 /* consultorio */
 .rooms{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:36px;align-items:start}
@@ -398,7 +400,7 @@ main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.how-head
     <p class="crumb"><a href="/">&larr; Página inicial</a></p>
     <span class="eyebrow">Psicoterapia individual</span>
     <h1 class="reveal"><b>Entender</b> o que acontece com você, <b>mudar</b> o que for preciso e viver uma <b>vida com sentido</b>.</h1>
-    <div class="couple reveal" style="grid-template-columns:1fr;padding:34px">
+    <div class="couple reveal with-photo" style="padding:34px">
       <div>
         <p style="font-family:Poppins,Inter,sans-serif;font-size:15px;line-height:1.5;margin:0 0 1em;text-align:justify">Talvez você esteja em um momento de vida em que nem mesmo consiga identificar com precisão o que está acontecendo com você ou qual é a real necessidade de ajuda.</p>
         <p style="font-family:Poppins,Inter,sans-serif;font-size:15px;line-height:1.5;margin:0 0 1em;text-align:justify">Ou talvez você já tenha buscado outros profissionais que não conseguiram entender de fato as suas questões ou que não trouxeram o alívio que você esperava.</p>
@@ -408,6 +410,8 @@ main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.how-head
         <p style="font-family:Poppins,Inter,sans-serif;font-size:15px;line-height:1.5;margin:0 0 1em;text-align:justify">Todo o trabalho é protegido por sigilo profissional.</p>
 
       </div>
+      <img class="service-photo" src="/img/terapia-individual.jpg" alt="Mulher sentada em uma poltrona, de cabeça baixa e com a mão na testa, em um momento de preocupação" width="1000" height="1000" loading="lazy" decoding="async">
+
     </div>
   </div>
 </section>
