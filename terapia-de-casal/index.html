@@ -268,8 +268,7 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
 .quote{font-family:Poppins,sans-serif;font-style:italic;font-size:1.35rem;line-height:1.4;color:var(--teal);border-left:3px solid var(--clay);padding-left:20px;margin:26px 0 0}
 .areas{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;padding:0;list-style:none}
 .areas li{padding:0;background:none}
-.area-btn{font:inherit;font-size:.88rem;font-weight:500;padding:8px 16px;border-radius:999px;border:1px solid transparent;background:var(--mist);color:var(--teal);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.area-btn:hover{border-color:var(--teal)}
+.area-btn{font:inherit;font-size:.88rem;font-weight:500;padding:8px 16px;border-radius:999px;border:1px solid transparent;background:var(--mist);color:var(--teal);cursor:default;transition:background .2s,color .2s,border-color .2s}
 .area-btn[aria-expanded="true"]{background:var(--teal);color:#fff}
 .area-panel{margin-top:14px;min-height:3.2em}
 .area-text{margin:0;padding:16px 18px;border-left:3px solid var(--lime);background:#fff;border-radius:0 12px 12px 0;font-size:.97rem;color:var(--ink)}
@@ -532,7 +531,6 @@ main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.how-head
     els.forEach(function(el){io.observe(el)});
   } else {els.forEach(function(el){el.classList.add("in")})}
 })();
-(function(){var bs=document.querySelectorAll(".area-btn");bs.forEach(function(b){b.addEventListener("click",function(){var open=b.getAttribute("aria-expanded")==="true";bs.forEach(function(x){x.setAttribute("aria-expanded","false");document.getElementById("area-"+x.dataset.i).hidden=true});if(!open){b.setAttribute("aria-expanded","true");document.getElementById("area-"+b.dataset.i).hidden=false}})})})();
 </script>
 <script>
 document.addEventListener('click',function(e){

@@ -271,8 +271,7 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
 .quote{font-family:Poppins,sans-serif;font-style:italic;font-size:1.35rem;line-height:1.4;color:var(--teal);border-left:3px solid var(--clay);padding-left:20px;margin:26px 0 0}
 .areas{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;padding:0;list-style:none}
 .areas li{padding:0;background:none}
-.area-btn{font:inherit;font-size:.88rem;font-weight:500;padding:8px 16px;border-radius:999px;border:1px solid transparent;background:var(--mist);color:var(--teal);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.area-btn:hover{border-color:var(--teal)}
+.area-btn{font:inherit;font-size:.88rem;font-weight:500;padding:8px 16px;border-radius:999px;border:1px solid transparent;background:var(--mist);color:var(--teal);cursor:default;transition:background .2s,color .2s,border-color .2s}
 .area-btn[aria-expanded="true"]{background:var(--teal);color:#fff}
 .area-panel{margin-top:14px;min-height:3.2em}
 .area-text{margin:0;padding:16px 18px;border-left:3px solid var(--lime);background:#fff;border-radius:0 12px 12px 0;font-size:.97rem;color:var(--ink)}
@@ -456,8 +455,7 @@ main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.how-head
       <p class="reveal">Sou psicólogo e atendo em consultório próprio desde 2007, com foco em casais e relacionamentos. Ao lado da clínica, passei muito tempo dentro de escolas, mediando conflitos e conversando com famílias. Isso me ensinou a ouvir quem está no meio de uma decisão difícil e a explicar as coisas sem rodeios.</p>
       <p class="reveal">Hoje sou mestre em Psicologia e Educação pelo UniCEUB.</p>
       <p class="quote reveal">Acredito em uma terapia que acolhe e, ao mesmo tempo, é honesta: que te receba como você está e te ajude a olhar a própria vida com verdade.</p>
-      <ul class="areas"><li><button type="button" class="area-btn" aria-expanded="false" data-i="0">Terapia de casal</button></li><li><button type="button" class="area-btn" aria-expanded="false" data-i="1">Relacionamentos e comunicação</button></li><li><button type="button" class="area-btn" aria-expanded="false" data-i="2">Terapia Cognitivo-Comportamental</button></li><li><button type="button" class="area-btn" aria-expanded="false" data-i="3">Adultos e jovens</button></li><li><button type="button" class="area-btn" aria-expanded="false" data-i="4">Mediação de conflitos</button></li><li><button type="button" class="area-btn" aria-expanded="false" data-i="5">Psicoeducação</button></li><li><button type="button" class="area-btn" aria-expanded="false" data-i="6">Atendimento online</button></li></ul>
-      <div class="area-panel" aria-live="polite"><p class="area-text" id="area-0" role="region" hidden>Sessões com os dois para entender o ciclo de brigas, distância ou desconfiança em que a relação entrou. Cada um é ouvido, e o casal decide com clareza o que fazer com isso. Não prometo cura nem prazo.</p><p class="area-text" id="area-1" role="region" hidden>Como vocês conversam pesa tanto quanto o assunto. Trabalhamos a escuta, o jeito de pedir e de discordar e o que fica sem ser dito, para a conversa deixar de virar briga.</p><p class="area-text" id="area-2" role="region" hidden>Abordagem que olha como pensamentos, emoções e comportamentos se influenciam. As sessões têm objetivos combinados e revisões periódicas, e você experimenta novas formas de reagir no dia a dia.</p><p class="area-text" id="area-3" role="region" hidden>Psicoterapia individual para dificuldades emocionais, decisões e relações. O processo é construído com você, no seu ritmo, com sigilo profissional.</p><p class="area-text" id="area-4" role="region" hidden>Uma conversa conduzida para que pessoas em desacordo se escutem e busquem um acordo possível. Vem da minha formação em Negociação e Gestão de Conflitos e da prática com famílias.</p><p class="area-text" id="area-5" role="region" hidden>Explicar, em linguagem simples, como funcionam emoções, hábitos e relações, para você entender o que acontece e participar do processo com mais autonomia.</p><p class="area-text" id="area-6" role="region" hidden>Sessões por vídeo, com o mesmo sigilo e a mesma duração do presencial, 50 minutos. Para quem mora longe, viaja muito ou prefere ser atendido de casa.</p><p class="area-hint">Toque em uma área para ler uma explicação curta.</p></div>
+      <ul class="areas"><li><span class="area-btn">Terapia de casal</span></li><li><span class="area-btn">Relacionamentos e comunicação</span></li><li><span class="area-btn">Terapia Cognitivo-Comportamental</span></li><li><span class="area-btn">Adultos e jovens</span></li><li><span class="area-btn">Mediação de conflitos</span></li><li><span class="area-btn">Psicoeducação</span></li><li><span class="area-btn">Atendimento online</span></li></ul>
     </div>
   </div>
 </section>
@@ -649,7 +647,6 @@ main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.how-head
     els.forEach(function(el){io.observe(el)});
   } else {els.forEach(function(el){el.classList.add("in")})}
 })();
-(function(){var bs=document.querySelectorAll(".area-btn");bs.forEach(function(b){b.addEventListener("click",function(){var open=b.getAttribute("aria-expanded")==="true";bs.forEach(function(x){x.setAttribute("aria-expanded","false");document.getElementById("area-"+x.dataset.i).hidden=true});if(!open){b.setAttribute("aria-expanded","true");document.getElementById("area-"+b.dataset.i).hidden=false}})})})();
 </script>
 <script>
 document.addEventListener('click',function(e){
