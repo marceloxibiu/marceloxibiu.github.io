@@ -28,7 +28,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A283F'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23F6F1E9'%3EMC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --sand:#FCF7F1; --sand-2:#F2E9DD; --ink:#0F2233; --muted:#56606A;
@@ -39,9 +39,9 @@
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;background:var(--sand);color:var(--ink);font-family:Poppins,system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:Poppins,sans-serif;font-weight:500;line-height:1.25;letter-spacing:-.015em;margin:0 0 .5em}
-h1,h2{font-family:'Bodoni Moda',Didot,'Bodoni 72',Georgia,serif;font-weight:600;text-transform:uppercase;line-height:1.2;letter-spacing:.03em}
-h1{font-size:clamp(1.8rem,4vw,2.9rem)}
-h2{font-size:clamp(1.5rem,2.8vw,2.1rem)}
+h1,h2{font-family:Poppins,sans-serif;font-weight:600;text-transform:uppercase;line-height:1.3;letter-spacing:.015em}
+h1{font-size:clamp(1.5rem,3.3vw,2.4rem)}
+h2{font-size:clamp(1.3rem,2.4vw,1.75rem)}
 h3{font-size:1.3rem}
 p{margin:0 0 1em}
 a{color:inherit}
@@ -107,12 +107,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,241,233,.9);backdrop
   radial-gradient(600px 400px at -5% 100%,rgba(10,40,63,.07),transparent 60%)}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
 .hero h1 em{font-style:normal;color:var(--teal-2)}
-.hero h1{font-size:clamp(1.5rem,2.7vw,2.15rem)}
+.hero h1{font-size:clamp(1.3rem,2.2vw,1.75rem)}
 @media (min-width:901px){
 .hero{padding:clamp(22px,4vh,46px) 0 clamp(26px,4vh,50px)}
 .hero-grid{grid-template-columns:1.3fr .7fr;gap:48px;align-items:start}
-.hero .eyebrow{margin-bottom:14px;font-size:.68rem}
-.hero h1{font-size:clamp(1.4rem,2vw + .3vh,1.85rem);margin-bottom:.4em}
+.hero .eyebrow{margin-bottom:18px;font-size:.68rem}
+.hero h1{font-size:clamp(1.25rem,1.7vw + .3vh,1.55rem);margin-bottom:.9em}
 .hero .intro{font-size:clamp(.86rem,.7vw + .5vh,1rem);line-height:1.5;max-width:70ch}
 .hero .intro p{margin:0 0 .55em}
 .hero .intro .intro-hi{font-size:1.2rem;margin-bottom:.3em}
@@ -308,7 +308,7 @@ button.chip .go{display:inline-flex;gap:6px;align-items:center;margin-top:12px;f
 .crumb a{color:var(--muted);text-decoration:none}
 .crumb a:hover{color:var(--teal)}
 section.service{padding-top:44px}
-.service h1{font-size:clamp(1.6rem,3.1vw,2.3rem);max-width:30ch}
+.service h1{font-size:clamp(1.4rem,2.7vw,1.95rem);max-width:30ch}
 .why{margin-top:54px}
 .why>h3{font-size:1.5rem}
 .why .cards{margin-top:20px}
@@ -356,12 +356,12 @@ main :is(p,li,.lead,.d,.area-text,figcaption,.note):not(.areas li):not(.how-head
 /* primeira tela compacta no computador */
 @media (min-width:901px){
 .hero{padding-top:clamp(12px,2vh,22px);padding-bottom:20px}
-.hero .intro p{margin:0 0 .3em}
-.hero .intro .intro-hi{margin-bottom:.15em}
-.hero .cta{margin:12px 0 10px}
+.hero .intro p{margin:0 0 .75em}
+.hero .intro .intro-hi{margin-bottom:.4em}
+.hero .cta{margin:20px 0 16px}
 .hero .cta .btn{padding:10px 22px}
-.hero .facts{margin:0 0 10px}
-.hero .eyebrow{margin-bottom:14px;font-size:.68rem}
+.hero .facts{margin:0 0 14px}
+.hero .eyebrow{margin-bottom:18px;font-size:.68rem}
 }
 </style>
 </head>
